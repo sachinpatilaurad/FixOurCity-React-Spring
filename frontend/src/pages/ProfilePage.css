@@ -1,0 +1,46 @@
+/* frontend/src/pages/ProfilePage.css */
+.profile-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top for potentially longer content */
+  padding-top: 40px; /* Space from navbar */
+  padding-bottom: 40px;
+  min-height: calc(100vh - 120px); /* Adjust based on navbar/footer */
+}
+
+.profile-card {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.profile-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+.profile-info p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #444;
+}
+
+.profile-info p strong {
+  color: #2c3e50;
+  margin-right: 8px;
+}
+
+.edit-profile-button {
+  display: block;
+  width: auto;
+  margin: 20px auto 0; /* Center button if used */
+  padding: 10px 20px;
+  /* Uses global button styles or define specifically */
+}

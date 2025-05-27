@@ -48,3 +48,26 @@
   font-weight: bold;
   background-color: #007bff; /* Highlight active link */
 }
+.nav-greeting {
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem; /* Same padding as nav-links */
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #e0e0e0; /* Match nav-link color */
+  cursor: pointer;
+  font-size: 1.1em; /* Match nav-link font-size */
+  padding: 0.5rem 1rem; /* Match nav-link padding */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logout-button:hover {
+  color: #ffffff;
+  background-color: #dc3545; /* Reddish for logout hover */
+}
