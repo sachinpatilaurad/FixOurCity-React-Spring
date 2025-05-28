@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 100px); /* Adjust if needed */
+  min-height: calc(100vh - 100px); /* Adjust if needed based on navbar/footer */
   padding: 20px;
 }
 
@@ -13,7 +13,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 450px; /* Can be slightly wider than login if more fields */
+  max-width: 450px; /* Slightly wider for more fields */
   text-align: center;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .register-form .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Slightly less margin for more fields */
   text-align: left;
 }
 
@@ -35,14 +35,14 @@
   color: #555;
 }
 
-/* Input fields will use global styles or can be overridden */
+/* Inputs use global styles, can be overridden here if needed */
 
 .register-button {
   width: 100%;
   padding: 12px;
   font-size: 1.1em;
+  margin-top: 10px; /* Add some space above button */
   transition: background-color 0.3s ease;
-  /* Inherits global button styles or define here */
 }
 
 .register-button:disabled {
@@ -50,7 +50,7 @@
   cursor: not-allowed;
 }
 
-.error-message {
+.error-message { /* Copied from LoginPage.css - could be a global component/style */
   color: #dc3545;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
@@ -60,7 +60,7 @@
   font-size: 0.9em;
 }
 
-.login-link-text { /* Changed class name for clarity */
+.login-link-text {
   margin-top: 20px;
   font-size: 0.9em;
   color: #555;

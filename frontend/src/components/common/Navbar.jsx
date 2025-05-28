@@ -63,6 +63,18 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
+              {" "}
+              {/* New Create Issue link */}
+              <NavLink
+                to="/create-issue"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+              >
+                Report Issue
+              </NavLink>
+            </li>
+            <li className="nav-item">
               {/* handleLogout IS USED HERE */}
               <button onClick={handleLogout} className="nav-link logout-button">
                 Logout

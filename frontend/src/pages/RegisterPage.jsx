@@ -1,8 +1,8 @@
 // frontend/src/pages/RegisterPage.jsx
-import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext"; // Import useAuth
-import "./RegisterPage.css"; // We'll create specific styles
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext'; // To use the register function
+import './RegisterPage.css'; // We'll create specific styles
 
 function RegisterPage() {
   const [name, setName] = useState(""); // Or username
@@ -32,24 +32,23 @@ function RegisterPage() {
       return;
     }
 
-    // Password complexity check (basic example)
+    // Password strength (basic example - can be more complex)
     if (password.length < 6) {
-      setError("Password must be at least 6 characters long.");
+      setError("Password should be at least 6 characters long.");
       setLoading(false);
       return;
     }
 
     try {
-      // Using the register function from AuthContext
-      // Pass an object with the user's details
+      // Call the register function from AuthContext
+      // Pass an object with the user data
       await register({ name, email, password });
-      // The AuthContext's register function (simulated for now)
-      // will resolve on success or reject on error.
-
-      alert("Registration Successful (Simulated)! Please login."); // Visual confirmation
+      // The AuthContext's register function currently just simulates
+      alert("Registration Successful (Simulated)! Please login."); // Or show a success message
       navigate("/login"); // Redirect to login page after successful registration
     } catch (err) {
-      // Catch errors thrown by the AuthContext's register function
+      // This would catch errors if the context's register function threw them
+      // For now, our simulated register in context doesn't throw.
       setError(err.message || "Registration failed. Please try again.");
     } finally {
       setLoading(false);
@@ -59,7 +58,7 @@ function RegisterPage() {
   return (
     <div className="register-page">
       <div className="register-container">
-        <h2>Create Your FixOurCity Account</h2>
+        <h2>Create Your Account</h2>
         <form onSubmit={handleSubmit} className="register-form">
           {error && <p className="error-message">{error}</p>}
           <div className="form-group">
@@ -74,7 +73,7 @@ function RegisterPage() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email Address</label>
             <input
               type="email"
               id="email"
@@ -107,7 +106,7 @@ function RegisterPage() {
             />
           </div>
           <button type="submit" className="register-button" disabled={loading}>
-            {loading ? "Registering..." : "Create Account"}
+            {loading ? "Creating Account..." : "Sign Up"}
           </button>
         </form>
         <p className="login-link-text">

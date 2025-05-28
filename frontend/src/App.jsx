@@ -1,11 +1,12 @@
 // frontend/src/App.jsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
-import RegisterPage from './pages/RegisterPage';
-import NotFoundPage from "./pages/NotFoundPage";
+import RegisterPage from "./pages/RegisterPage";
 import ViewIssuesPage from "./pages/ViewIssuesPage";
 import ProfilePage from "./pages/ProfilePage"; // Ensure this path is correct
+import CreateIssuePage from "./pages/CreateIssuePage";
+import NotFoundPage from "./pages/NotFoundPage";
 import Navbar from "./components/common/Navbar";
 import ProtectedRoute from "./components/routing/ProtectedRoute"; // Ensure this path is correct
 // /Users/sachinpatil/fixourcity-app/frontend/src/routing
@@ -34,7 +35,9 @@ function App() {
               </ProtectedRoute>
             }
           />
-
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/create-issue" element={<CreateIssuePage />} />
+          {/* </Route> */}
           {/* Catch-all route for undefined paths */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

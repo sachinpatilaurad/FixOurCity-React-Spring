@@ -1,0 +1,175 @@
+/* frontend/src/pages/CreateIssuePage.css */
+.create-issue-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top as form can be long */
+  min-height: calc(100vh - 100px);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.create-issue-container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px; /* Wider for more complex form */
+}
+
+.create-issue-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+.create-issue-form .form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Inputs, textareas, selects use global styles or can be overridden */
+.create-issue-form select { /* Specific style for select if needed */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    font-size: 1em; /* Ensure consistent font size */
+}
+
+.image-preview-name {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.submit-issue-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.submit-issue-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Shared error and success message styles (can be globalized) */
+.error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.success-message {
+  color: #155724; /* Green for success */
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+/* frontend/src/pages/CreateIssuePage.css */
+/* ... (existing styles) ... */
+
+.camera-view {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.video-preview {
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #333; /* Placeholder color while video loads */
+}
+
+.camera-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+}
+
+.camera-controls button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.capture-button {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+.capture-button:hover {
+  background-color: #218838;
+}
+
+.cancel-camera-button {
+  background-color: #6c757d; /* Gray */
+  color: white;
+}
+.cancel-camera-button:hover {
+  background-color: #5a6268;
+}
+
+
+.image-upload-options .button-group {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between the buttons and "OR" */
+  margin-top: 5px;
+}
+
+.image-upload-options .button-group span {
+    font-style: italic;
+    color: #555;
+}
+
+.upload-button-label,
+.capture-live-button {
+  padding: 8px 12px;
+  border: 1px solid #007bff;
+  color: #0a0b0d;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.upload-button-label:hover,
+.capture-live-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.upload-button-label:disabled,
+.capture-live-button:disabled {
+  border-color: #ccc;
+  color: #ccc;
+  background-color: #f8f8f8;
+  cursor: not-allowed;
+}
